@@ -32,13 +32,13 @@ nav.m a:hover{color:var(--or2)}
 .btn.p{background:var(--or);color:#fff}.btn.p:hover{background:var(--or2)}
 .btn.w{background:var(--ok);color:#fff}
 .btn.o{border-color:var(--ink);color:var(--ink);background:transparent}
-.road{position:fixed;left:0;right:0;bottom:0;height:96px;overflow:hidden;pointer-events:none;z-index:-1;opacity:.13}
-.road svg{position:absolute;bottom:10px;left:0;width:330px;height:auto;animation:drive 55s linear infinite}
+.road{position:fixed;left:0;right:0;bottom:0;height:96px;overflow:hidden;pointer-events:none;z-index:-1;opacity:.24}
+.road svg{position:absolute;bottom:10px;left:0;width:330px;height:auto;animation:drive 38s linear infinite}
 .road .wh{transform-box:fill-box;transform-origin:center;animation:spin 1.4s linear infinite}
 @keyframes drive{from{transform:translateX(-360px)}to{transform:translateX(100vw)}}
 @keyframes spin{to{transform:rotate(360deg)}}
 .s.alt{background:rgba(255,255,255,.88)}
-@media(max-width:759px){.road{bottom:62px}.road svg{width:240px}}
+@media(max-width:759px){.road{bottom:62px}.road svg{width:300px}}
 @media(prefers-reduced-motion:reduce){.road{display:none}}
 .hero{padding:44px 0 36px}
 .hero .wrap{display:grid;gap:28px}
