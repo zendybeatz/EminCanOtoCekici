@@ -40,15 +40,14 @@ nav.m a:hover{color:var(--or2)}
 .s.alt{background:rgba(255,255,255,.88)}
 @media(max-width:759px){.road{bottom:62px}.road svg{width:300px}}
 @media(prefers-reduced-motion:reduce){.road{display:none}}
-.hero{position:relative;overflow:hidden;color:#fff;background:#231f1a;padding:56px 0 48px}
-.slides,.shade{position:absolute;inset:0}
-.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease}
-.slides img.on{opacity:1}
-.shade{background:linear-gradient(90deg,rgba(20,16,12,.86),rgba(20,16,12,.62) 60%,rgba(20,16,12,.45))}
-.hero .wrap{position:relative}
-.hero .kick{background:rgba(255,255,255,.16);color:#ffd9bf}
-.hero .wrap p.lead{color:#f6efe4}
-@media(max-width:759px){.shade{background:rgba(20,16,12,.68)}}
+.hero{padding:44px 0 36px}
+.strip{overflow:hidden;padding:6px 0 34px}
+.track{display:flex;gap:14px;width:max-content;animation:slide 60s linear infinite}
+.strip:hover .track{animation-play-state:paused}
+.track img{width:240px;height:240px;object-fit:cover;border-radius:16px;flex:none;display:block}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 7px))}}
+@media(max-width:759px){.track img{width:180px;height:180px}}
+@media(prefers-reduced-motion:reduce){.strip{overflow-x:auto}.track{animation:none}}
 
 .hero .wrap{display:grid;gap:28px}
 .kick{display:inline-block;background:#ffe8d6;color:var(--or2);font-weight:700;font-size:13px;padding:5px 12px;border-radius:99px;margin-bottom:14px}
@@ -112,13 +111,13 @@ footer ul{list-style:none}footer li{margin-bottom:5px}
 </head><body><header class="top"><div class="wrap">
 <a class="logo" href=""><i>E</i>Emincan Oto Çekici</a>
 <nav class="m"><a href="bolgeler/">Bölgeler</a><a href="yol/tem-otoyolu/">TEM</a><a href="yol/d100-karayolu/">D100</a><a href="rehber/">Rehber</a><a href="iletisim/">İletişim</a></nav>
-<a class="btn p" href="tel:+905334544745">Ara</a></div></header><section class="hero"><div class="slides"><img src="img/van-tasima.jpg" alt="Emincan Oto Çekici kayar kasalı çekici ile van tipi araç taşıma" style="object-position:50% 50%" class="on"><img src="img/havalimani-cekici.jpg" alt="Havalimanı girişinde kayar kasalı çekici" style="object-position:50% 55%" loading="lazy"><img src="img/tunel-yol-yardim.jpg" alt="Tünelde gece araç kurtarma" style="object-position:50% 60%" loading="lazy"><img src="img/otoyol-yol-yardim.jpg" alt="Otoyol kenarında yol yardım çekicisi" style="object-position:50% 45%" loading="lazy"><img src="img/emincan-cekici.jpg" alt="Emincan yazılı çekici ile binek araç taşıma" style="object-position:50% 40%" loading="lazy"><img src="img/kayar-kasa-tasima.jpg" alt="Kayar kasalı çekicide spor araç taşıma" style="object-position:50% 55%" loading="lazy"><img src="img/oto-kurtarici.jpg" alt="Oto kurtarıcı çekici ile araç taşıma" style="object-position:50% 50%" loading="lazy"></div><div class="shade"></div><div class="wrap"><div>
+<a class="btn p" href="tel:+905334544745">Ara</a></div></header><section class="hero"><div class="wrap"><div>
 <span class="kick">Sakarya · 7/24 açık</span>
 <h1>Sakarya'da yolda mı kaldınız? Çekici yola çıksın.</h1>
 <p class="lead">Adapazarı'ndan Karasu'ya, Sapanca'dan Geyve'ye; TEM ve D100 dahil Sakarya'nın her yerinde kayar kasalı çekici ve yol yardım.</p>
 <div class="cta"><a class="btn p" href="tel:+905334544745">📞 0 533 454 47 45</a><a class="btn w" href="https://wa.me/905334544745?text=Merhaba%2C%20yolda%20kald%C4%B1m.%20%C3%87ekici%20ve%20yol%20yard%C4%B1m%20i%C3%A7in%20ula%C5%9F%C4%B1yorum.">💬 WhatsApp Konum Gönder</a></div></div>
-<div class="panel"><h2>4 adımda yardım</h2><ol><li><div><b>Arayın</b><span>Nerede olduğunuzu ve aracın durumunu kısaca söyleyin.</span></div></li><li><div><b>Konum gönderin</b><span>WhatsApp'tan canlı konum paylaşın; sizi tarif etmek zorunda kalmayın.</span></div></li><li><div><b>Fiyatı netleştirin</b><span>Araç yüklenmeden önce ücreti konuşur, anlaşırız.</span></div></li><li><div><b>Aracınız teslim</b><span>İstediğiniz servise, sanayiye ya da adrese bırakırız.</span></div></li></ol></div></div>
-<script>(function(){var s=document.querySelectorAll(".slides img");if(s.length<2||matchMedia("(prefers-reduced-motion:reduce)").matches)return;var i=0;setInterval(function(){s[i].classList.remove("on");i=(i+1)%s.length;s[i].classList.add("on")},5000)})()</script></section>
+<div class="panel"><h2>4 adımda yardım</h2><ol><li><div><b>Arayın</b><span>Nerede olduğunuzu ve aracın durumunu kısaca söyleyin.</span></div></li><li><div><b>Konum gönderin</b><span>WhatsApp'tan canlı konum paylaşın; sizi tarif etmek zorunda kalmayın.</span></div></li><li><div><b>Fiyatı netleştirin</b><span>Araç yüklenmeden önce ücreti konuşur, anlaşırız.</span></div></li><li><div><b>Aracınız teslim</b><span>İstediğiniz servise, sanayiye ya da adrese bırakırız.</span></div></li></ol></div></div></section>
+<section class="strip" aria-label="Çalışmalarımızdan kareler"><div class="track"><img src="img/van-tasima.jpg" alt="Kayar kasalı çekici ile van taşıma" loading="lazy" width="240" height="240"><img src="img/havalimani-cekici.jpg" alt="Havalimanı girişinde çekici" loading="lazy" width="240" height="240"><img src="img/tunel-yol-yardim.jpg" alt="Tünelde gece araç kurtarma" loading="lazy" width="240" height="240"><img src="img/otoyol-yol-yardim.jpg" alt="Otoyol kenarında yol yardım" loading="lazy" width="240" height="240"><img src="img/emincan-cekici.jpg" alt="Emincan çekici ile araç taşıma" loading="lazy" width="240" height="240"><img src="img/kayar-kasa-tasima.jpg" alt="Kayar kasalı çekicide araç taşıma" loading="lazy" width="240" height="240"><img src="img/oto-kurtarici.jpg" alt="Oto kurtarıcı ile araç taşıma" loading="lazy" width="240" height="240"><img src="img/van-tasima.jpg" alt="Kayar kasalı çekici ile van taşıma" loading="lazy" width="240" height="240"><img src="img/havalimani-cekici.jpg" alt="Havalimanı girişinde çekici" loading="lazy" width="240" height="240"><img src="img/tunel-yol-yardim.jpg" alt="Tünelde gece araç kurtarma" loading="lazy" width="240" height="240"><img src="img/otoyol-yol-yardim.jpg" alt="Otoyol kenarında yol yardım" loading="lazy" width="240" height="240"><img src="img/emincan-cekici.jpg" alt="Emincan çekici ile araç taşıma" loading="lazy" width="240" height="240"><img src="img/kayar-kasa-tasima.jpg" alt="Kayar kasalı çekicide araç taşıma" loading="lazy" width="240" height="240"><img src="img/oto-kurtarici.jpg" alt="Oto kurtarıcı ile araç taşıma" loading="lazy" width="240" height="240"></div></section>
 <section class="s alt"><div class="wrap"><h2>Hizmetlerimiz</h2><p class="sub">Yolda ihtiyaç duyabileceğiniz temel yardımlar tek numarada.</p>
 <div class="grid g3"><div class="card"><h3>Kayar kasalı çekici</h3><p>Araç tamamen kasaya alınır; tekerlekler yerde dönmez. Çalışmayan, hasarlı ya da alçak araçlar için en güvenli yöntem.</p></div><div class="card"><h3>Kaza sonrası kurtarma</h3><p>Yoldan çıkan ya da çarpışan araç, yetkililerin yönlendirmesine uygun şekilde güvenle kaldırılır ve istediğiniz adrese bırakılır.</p></div><div class="card"><h3>Akü takviyesi</h3><p>Marş basmıyorsa önce yerinde takviye deneriz; çalışmazsa kasayla servise taşırız.</p></div><div class="card"><h3>Lastik ve yakıt yardımı</h3><p>Patlak lastik ya da biten yakıt yüzünden yolda kalan araca yerinde yardım.</p></div><div class="card"><h3>Saplanan araç kurtarma</h3><p>Çamura, kara, kuma ya da çukura saplanan aracı zemine uygun yöntemle yola çıkarırız.</p></div><div class="card"><h3>Şehirlerarası araç taşıma</h3><p>Sakarya çıkışlı araçları Kocaeli, İstanbul, Bursa, Düzce ve Bilecik dahil Marmara&#x27;ya taşırız.</p></div></div></div></section>
 <section class="s"><div class="wrap"><h2>Sakarya oto çekici: hangi bölgedesiniz?</h2><p class="sub">Her bölge için o bölgeye özgü bilgi ve güzergâhlar hazırladık.</p>
