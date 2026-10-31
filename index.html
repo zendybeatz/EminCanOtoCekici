@@ -32,6 +32,14 @@ nav.m a:hover{color:var(--or2)}
 .btn.p{background:var(--or);color:#fff}.btn.p:hover{background:var(--or2)}
 .btn.w{background:var(--ok);color:#fff}
 .btn.o{border-color:var(--ink);color:var(--ink);background:transparent}
+.road{position:fixed;left:0;right:0;bottom:0;height:96px;overflow:hidden;pointer-events:none;z-index:-1;opacity:.13}
+.road svg{position:absolute;bottom:10px;left:0;width:330px;height:auto;animation:drive 55s linear infinite}
+.road .wh{transform-box:fill-box;transform-origin:center;animation:spin 1.4s linear infinite}
+@keyframes drive{from{transform:translateX(-360px)}to{transform:translateX(100vw)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.s.alt{background:rgba(255,255,255,.88)}
+@media(max-width:759px){.road{bottom:62px}.road svg{width:240px}}
+@media(prefers-reduced-motion:reduce){.road{display:none}}
 .hero{padding:44px 0 36px}
 .hero .wrap{display:grid;gap:28px}
 .kick{display:inline-block;background:#ffe8d6;color:var(--or2);font-weight:700;font-size:13px;padding:5px 12px;border-radius:99px;margin-bottom:14px}
@@ -47,7 +55,7 @@ nav.m a:hover{color:var(--or2)}
 .panel li b{display:block}
 .panel li span{color:#c9c0b3;font-size:15px}
 section.s{padding:38px 0}
-section.s.alt{background:#fff;border-block:1px solid var(--line)}
+section.s.alt{border-block:1px solid var(--line)}
 .s h2{font-size:clamp(26px,4.5vw,34px);margin-bottom:10px;font-weight:800}
 .s .sub{color:var(--mut);margin-bottom:22px;max-width:640px}
 .grid{display:grid;gap:14px}
@@ -92,7 +100,15 @@ footer ul{list-style:none}footer li{margin-bottom:5px}
 }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["AutoTowing", "LocalBusiness"], "@id": "https://alanadi.example/#business", "name": "Emincan Oto Çekici", "url": "https://alanadi.example/", "telephone": "+905334544745", "image": "https://alanadi.example/og-image.png", "description": "Sakarya ve ilçelerinde 7/24 oto çekici, kayar kasalı araç taşıma, akü takviyesi, lastik ve yakıt yardımı.", "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59"}, "areaServed": [{"@type": "AdministrativeArea", "name": "Sakarya"}, {"@type": "City", "name": "Adapazarı"}, {"@type": "City", "name": "Akyazı"}, {"@type": "City", "name": "Arifiye"}, {"@type": "City", "name": "Erenler"}, {"@type": "City", "name": "Ferizli"}, {"@type": "City", "name": "Geyve"}, {"@type": "City", "name": "Hendek"}, {"@type": "City", "name": "Karapürçek"}, {"@type": "City", "name": "Karasu"}, {"@type": "City", "name": "Kaynarca"}, {"@type": "City", "name": "Kocaali"}, {"@type": "City", "name": "Pamukova"}, {"@type": "City", "name": "Sapanca"}, {"@type": "City", "name": "Serdivan"}, {"@type": "City", "name": "Söğütlü"}, {"@type": "City", "name": "Taraklı"}]}, {"@type": "WebSite", "@id": "https://alanadi.example/#site", "url": "https://alanadi.example/", "name": "Emincan Oto Çekici", "inLanguage": "tr"}, {"@type": "WebPage", "@id": "https://alanadi.example/#page", "url": "https://alanadi.example/", "name": "Emincan Oto Çekici | Sakarya 7/24 Çekici ve Yol Yardım", "description": "Sakarya ve ilçelerinde 7/24 oto çekici: kayar kasalı taşıma, kaza kurtarma, akü, lastik ve yakıt yardımı. Arayın ya da konum atın: 0 533 454 47 45", "isPartOf": {"@id": "https://alanadi.example/#site"}, "about": {"@id": "https://alanadi.example/#business"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Sakarya'da gece de çekici bulabilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Haftanın 7 günü, 24 saat hizmet veriyoruz. Gece yarısı da hafta sonu da aynı numaradan ulaşabilirsiniz."}}, {"@type": "Question", "name": "Hangi ilçelere hizmet veriyorsunuz?", "acceptedAnswer": {"@type": "Answer", "text": "Adapazarı, Serdivan, Erenler, Arifiye, Sapanca, Akyazı, Hendek, Karasu, Kocaali ve Geyve başta olmak üzere Sakarya'nın tüm ilçelerine gidiyoruz."}}, {"@type": "Question", "name": "Ücreti nasıl belirliyorsunuz?", "acceptedAnswer": {"@type": "Answer", "text": "Ücret mesafeye, aracın türüne ve bulunduğu duruma göre değişir. Aracınızı yüklemeden önce fiyatı konuşur, anlaşırız."}}, {"@type": "Question", "name": "Aracımı başka şehre taşıyabilir misiniz?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Kocaeli, İstanbul, Bursa, Düzce ve Bilecik dahil Marmara'ya şehirlerarası taşıma yapıyoruz."}}, {"@type": "Question", "name": "Konumumu nasıl bildirmeliyim?", "acceptedAnswer": {"@type": "Answer", "text": "En kolayı WhatsApp'tan canlı konum göndermek. Otoyoldaysanız ayrıca yön ve km bilgisini söyleyin."}}]}, {"@type": "Service", "name": "Kayar kasalı çekici", "description": "Araç tamamen kasaya alınır; tekerlekler yerde dönmez. Çalışmayan, hasarlı ya da alçak araçlar için en güvenli yöntem.", "provider": {"@id": "https://alanadi.example/#business"}, "areaServed": "Sakarya"}, {"@type": "Service", "name": "Kaza sonrası kurtarma", "description": "Yoldan çıkan ya da çarpışan araç, yetkililerin yönlendirmesine uygun şekilde güvenle kaldırılır ve istediğiniz adrese bırakılır.", "provider": {"@id": "https://alanadi.example/#business"}, "areaServed": "Sakarya"}, {"@type": "Service", "name": "Akü takviyesi", "description": "Marş basmıyorsa önce yerinde takviye deneriz; çalışmazsa kasayla servise taşırız.", "provider": {"@id": "https://alanadi.example/#business"}, "areaServed": "Sakarya"}, {"@type": "Service", "name": "Lastik ve yakıt yardımı", "description": "Patlak lastik ya da biten yakıt yüzünden yolda kalan araca yerinde yardım.", "provider": {"@id": "https://alanadi.example/#business"}, "areaServed": "Sakarya"}, {"@type": "Service", "name": "Saplanan araç kurtarma", "description": "Çamura, kara, kuma ya da çukura saplanan aracı zemine uygun yöntemle yola çıkarırız.", "provider": {"@id": "https://alanadi.example/#business"}, "areaServed": "Sakarya"}, {"@type": "Service", "name": "Şehirlerarası araç taşıma", "description": "Sakarya çıkışlı araçları Kocaeli, İstanbul, Bursa, Düzce ve Bilecik dahil Marmara'ya taşırız.", "provider": {"@id": "https://alanadi.example/#business"}, "areaServed": "Sakarya"}]}</script>
-</head><body><header class="top"><div class="wrap">
+</head><body><div class="road" aria-hidden="true"><svg viewBox="0 0 420 96" fill="#231f1a">
+<rect x="8" y="46" width="132" height="22" rx="8"/><path d="M34 46l18-20h52l20 20z"/>
+<circle class="wh" cx="44" cy="70" r="13"/><circle class="wh" cx="112" cy="70" r="13"/>
+<path d="M140 52h46" stroke="#e8590c" stroke-width="3" fill="none"/>
+<rect x="190" y="52" width="120" height="14" rx="3"/><path d="M215 52l24-34 8 6-20 28z" fill="#e8590c"/>
+<path d="M243 22L146 50" stroke="#231f1a" stroke-width="2" fill="none"/>
+<path d="M310 66V36h40l26 20 24 4v6z"/><rect x="318" y="40" width="26" height="14" rx="2" fill="#fbf7f1"/>
+<circle class="wh" cx="225" cy="72" r="13"/><circle class="wh" cx="265" cy="72" r="13"/><circle class="wh" cx="372" cy="72" r="13"/>
+</svg></div><header class="top"><div class="wrap">
 <a class="logo" href=""><i>E</i>Emincan Oto Çekici</a>
 <nav class="m"><a href="bolgeler/">Bölgeler</a><a href="yol/tem-otoyolu/">TEM</a><a href="yol/d100-karayolu/">D100</a><a href="rehber/">Rehber</a><a href="iletisim/">İletişim</a></nav>
 <a class="btn p" href="tel:+905334544745">Ara</a></div></header><section class="hero"><div class="wrap"><div>
