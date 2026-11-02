@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /admin-data/
 
 Sitemap: https://alanadi.example/sitemap.xml
