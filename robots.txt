@@ -1,5 +1,2 @@
 User-agent: *
 Allow: /
-Disallow: /admin-data/
-
-Sitemap: https://sakaryalicekici.com/sitemap.xml
